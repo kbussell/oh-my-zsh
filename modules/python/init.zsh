@@ -22,3 +22,9 @@ if [[ -n "$WORKON_HOME" ]] && (( $+commands[virtualenvwrapper.sh] )); then
   source "$commands[virtualenvwrapper.sh]"
 fi
 
+function current_virtualenv() {
+    if [[ -n $VIRTUAL_ENV ]]; then
+        echo " (`basename \"$VIRTUAL_ENV\"`)"
+    fi
+}
+
