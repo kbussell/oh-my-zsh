@@ -22,7 +22,8 @@ version is 4.3.10.
   3. Create a new Zsh configuration by copying the Zsh configuration file
      templates provided:
 
-        for rcfile in ~/.oh-my-zsh/templates/z{shenv,shrc,login,logout}; do
+        cd ~/.oh-my-zsh/templates
+        for rcfile in z{shenv,shrc,login,logout}; do
           cp -f "${rcfile}" "${HOME}/.${rcfile}"
         done
 
